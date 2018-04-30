@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour {
     public static GameManager GM;
     public List<GameObject> defensePoints;
 
+    public List<GameObject> portals;
+
     // Use this for initialization
     void Start () {
         GM = this;
