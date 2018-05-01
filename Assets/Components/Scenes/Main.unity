@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.34744054, g: 0.4146754, b: 0.4977309, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -89,7 +89,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000008, guid: d0bad1e7c4f479a408b5752c6f5fa02e,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -1309,7 +1310,7 @@ MonoBehaviour:
   propData: {fileID: 11400000, guid: 24e414079bfeff047bfb9c0a6beeb50a, type: 2}
   oldBaseMapSize: 16
   oldBaseMapDistance: 0
-  reenabled: 0
+  reenabled: 1
   sTerrainDirty: 0
 --- !u!1 &893552577
 GameObject:
