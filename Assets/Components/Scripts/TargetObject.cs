@@ -6,6 +6,7 @@ public class TargetObject : MonoBehaviour {
 
     public static TargetObject tarObj;
     public GameObject target;
+    public Vector3 hitPoint;
 
 
 	// Use this for initialization
@@ -23,6 +24,7 @@ public class TargetObject : MonoBehaviour {
         if (Physics.Raycast(cameraCenter, this.transform.forward, out hit, 1000))
         {
             target = hit.transform.gameObject;
+            hitPoint = hit.point;
         }
         else
         {

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Defence Point
   - Portal
+  - Enemy
   layers:
   - Default
   - TransparentFX

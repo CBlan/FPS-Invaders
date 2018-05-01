@@ -7,7 +7,7 @@ public class DropshipAI : MonoBehaviour {
 
     public GameObject[] enemyTypes;
     public Transform[] spawnPoints;
-    public Transform dropArea;
+    private Transform dropArea;
     public float areaRangeX = 5;
     public float areaRangeY = 3;
     public float areaRangeZ = 5;
@@ -19,8 +19,11 @@ public class DropshipAI : MonoBehaviour {
     public int enemiesCount;
     private int enemiesCurrent;
 
+    private GameObject enemySpawned;
+
     // Use this for initialization
     void Start () {
+        dropArea = GameManager.GM.dropZones[Random.Range(0, GameManager.GM.dropZones.Length)];
         target = new Vector3(Random.Range(dropArea.position.x - areaRangeX, dropArea.position.x + areaRangeX), Random.Range(dropArea.position.y - areaRangeY, dropArea.position.y + areaRangeY), Random.Range(dropArea.position.z - areaRangeZ, dropArea.position.z + areaRangeZ));
 	}
 	
@@ -63,13 +66,15 @@ public class DropshipAI : MonoBehaviour {
         {
             float step = shipSpeed * Time.deltaTime;
             transform.Translate(Vector3.forward * step);
+            Destroy(gameObject, 30);
         }
     }
 
     //spawn enemies at interval
     IEnumerator SpawnEnemy()
     {
-        Instantiate(enemyTypes[Random.Range(0, enemyTypes.Length)], spawnPoints[Random.Range(0, spawnPoints.Length)].position, Quaternion.identity);
+        enemySpawned = Instantiate(enemyTypes[Random.Range(0, enemyTypes.Length)], spawnPoints[Random.Range(0, spawnPoints.Length)].position, Quaternion.identity);
+        GameManager.GM.enemies.Add(enemySpawned);
         enemiesCurrent++;
         if (enemiesCurrent < enemiesCount)
         {
