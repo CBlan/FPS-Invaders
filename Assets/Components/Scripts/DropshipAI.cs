@@ -18,8 +18,10 @@ public class DropshipAI : MonoBehaviour {
     public float spawnTime = 1;
     public int enemiesCount;
     private int enemiesCurrent;
+    private bool finishedSpawning = false;
 
     private GameObject enemySpawned;
+    public GameObject portalEffect;
 
     // Use this for initialization
     void Start () {
@@ -52,19 +54,21 @@ public class DropshipAI : MonoBehaviour {
                 {
                     //start spawning and stop moving
                     StartCoroutine("SpawnEnemy");
+                    portalEffect.SetActive(true);
                     target = Vector3.zero;
                 }
                 //else pick a new move target
-                else
-                {
-                    target = new Vector3(Random.Range(dropArea.position.x - areaRangeX, dropArea.position.x + areaRangeX), Random.Range(dropArea.position.y - areaRangeY, dropArea.position.y + areaRangeY), Random.Range(dropArea.position.z - areaRangeZ, dropArea.position.z + areaRangeZ));
-                }
+                //else
+                //{
+                //    target = new Vector3(Random.Range(dropArea.position.x - areaRangeX, dropArea.position.x + areaRangeX), Random.Range(dropArea.position.y - areaRangeY, dropArea.position.y + areaRangeY), Random.Range(dropArea.position.z - areaRangeZ, dropArea.position.z + areaRangeZ));
+                //}
             }      
         }
         //move away once finished spawning
-        if (enemiesCurrent >= enemiesCount)
+        if (finishedSpawning)
         {
             float step = shipSpeed * Time.deltaTime;
+            portalEffect.SetActive(false);
             transform.Translate(Vector3.forward * step);
             Destroy(gameObject, 30);
         }
@@ -73,13 +77,19 @@ public class DropshipAI : MonoBehaviour {
     //spawn enemies at interval
     IEnumerator SpawnEnemy()
     {
+        yield return new WaitForSeconds(spawnTime);
         enemySpawned = Instantiate(enemyTypes[Random.Range(0, enemyTypes.Length)], spawnPoints[Random.Range(0, spawnPoints.Length)].position, Quaternion.identity);
         GameManager.GM.enemies.Add(enemySpawned);
         enemiesCurrent++;
         if (enemiesCurrent < enemiesCount)
         {
-            yield return new WaitForSeconds(spawnTime);
+            //yield return new WaitForSeconds(spawnTime);
             StartCoroutine("SpawnEnemy");
+        }
+        if (enemiesCurrent == enemiesCount)
+        {
+            yield return new WaitForSeconds(spawnTime);
+            finishedSpawning = true;
         }
         yield break;
     }

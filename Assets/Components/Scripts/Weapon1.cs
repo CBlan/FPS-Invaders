@@ -35,7 +35,7 @@ public class Weapon1 : MonoBehaviour {
 
     void WeaponFired()
     {
-        print("Weapon Fired");
+        //print("Weapon Fired");
         GameObject fireingMuzzle = muzzles[Random.Range(0, muzzles.Length)];
         bulletFired = Instantiate(bullet, fireingMuzzle.transform.position, fireingMuzzle.transform.rotation);
         bulletFired.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);

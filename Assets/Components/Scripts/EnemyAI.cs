@@ -14,6 +14,8 @@ public class EnemyAI : MonoBehaviour {
     public LayerMask mask;
     private bool hasCollided;
     public GameObject thrusters;
+    public GameObject landingEffect;
+    private GameObject landEffect;
 
     // Use this for initialization
     void Start () {
@@ -48,10 +50,12 @@ public class EnemyAI : MonoBehaviour {
 
             if (Physics.Raycast(ray, out hit, activationHeight, mask.value))
             {
-
+                landEffect = Instantiate(landingEffect, hit.point, Quaternion.identity);
+                //landEffect.transform.SetParent(this.gameObject.transform);
                 agent.enabled = true;
                 transform.GetChild(0).gameObject.GetComponent<Motion_Bobbing>().enabled = true;
                 thrusters.SetActive(true);
+                rB.isKinematic = true;
             }
         }
 
