@@ -11,6 +11,9 @@ public class EnemyAI : MonoBehaviour {
     public float activationHeight = 2;
     public float enemyDamage;
     public GameObject explosionEffect;
+    public LayerMask mask;
+    private bool hasCollided;
+    public GameObject thrusters;
 
     // Use this for initialization
     void Start () {
@@ -41,13 +44,14 @@ public class EnemyAI : MonoBehaviour {
         if (!agent.enabled)
         {
             RaycastHit hit;
+            Ray ray = new Ray(transform.position, Vector3.down);
 
-            if (Physics.Raycast(transform.position, Vector3.down, out hit))
+            if (Physics.Raycast(ray, out hit, activationHeight, mask.value))
             {
-                if (transform.position.y - activationHeight <= hit.point.y)
-                {
-                    agent.enabled = true;
-                }
+
+                agent.enabled = true;
+                transform.GetChild(0).gameObject.GetComponent<Motion_Bobbing>().enabled = true;
+                thrusters.SetActive(true);
             }
         }
 
@@ -62,9 +66,13 @@ public class EnemyAI : MonoBehaviour {
 
         if (collision.gameObject.tag == "Portal")
         {
-            Instantiate(explosionEffect, transform.position, Quaternion.identity);
-            collision.gameObject.GetComponent<Health>().hP -= enemyDamage;
-            Destroy(gameObject);
+            if (!hasCollided)
+            {
+                hasCollided = true;
+                Instantiate(explosionEffect, transform.position, Quaternion.identity);
+                collision.gameObject.GetComponent<Health>().hP -= enemyDamage;
+                Destroy(gameObject);
+            }
         }
     }
 }

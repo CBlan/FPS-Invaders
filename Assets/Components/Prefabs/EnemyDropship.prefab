@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyTypes:
-  - {fileID: 1843676573076852, guid: 92af2a667ba4919418bc5c08c7608d5b, type: 2}
+  - {fileID: 1189656460776804, guid: 92af2a667ba4919418bc5c08c7608d5b, type: 2}
   spawnPoints:
   - {fileID: 4698222943030010}
   areaRangeX: 20

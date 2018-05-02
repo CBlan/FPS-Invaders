@@ -13,10 +13,15 @@ public class Motion_Bobbing : MonoBehaviour {
 
     void Start()
     {
+        //initialY = transform.position.y;
+    }
+
+    private void OnEnable()
+    {
         initialY = transform.position.y;
     }
-    
-	void Update ()
+
+    void Update ()
     {
         idleBob();
 	}
@@ -29,6 +34,6 @@ public class Motion_Bobbing : MonoBehaviour {
         float y = initialY + amplitude * Mathf.Cos(waveAngle + frequency);
         float z = transform.position.z;
 
-        transform.localPosition = new Vector3(x, y, z);
+        transform.position = new Vector3(x, y, z);
     }
 }
