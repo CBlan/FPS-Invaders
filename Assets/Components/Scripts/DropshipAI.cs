@@ -22,21 +22,25 @@ public class DropshipAI : MonoBehaviour {
 
     private GameObject enemySpawned;
     public GameObject portalEffect;
+    public LayerMask mask;
+    private bool targetChosen = false;
 
     // Use this for initialization
     void Start () {
         dropArea = GameManager.GM.dropZones[Random.Range(0, GameManager.GM.dropZones.Length)];
+
         target = new Vector3(Random.Range(dropArea.position.x - areaRangeX, dropArea.position.x + areaRangeX), Random.Range(dropArea.position.y - areaRangeY, dropArea.position.y + areaRangeY), Random.Range(dropArea.position.z - areaRangeZ, dropArea.position.z + areaRangeZ));
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
 
-        if (!IsAboveNavMesh())
+        if (!IsAboveNavMesh() && !targetChosen)
         {
             target = new Vector3(Random.Range(dropArea.position.x - areaRangeX, dropArea.position.x + areaRangeX), Random.Range(dropArea.position.y - areaRangeY, dropArea.position.y + areaRangeY), Random.Range(dropArea.position.z - areaRangeZ, dropArea.position.z + areaRangeZ));
             return;
         }
+        targetChosen = true;
 
         //check if needs to move
         if (target != Vector3.zero)
@@ -50,13 +54,13 @@ public class DropshipAI : MonoBehaviour {
             if (transform.position == target)
             {
                 //check of target is a valid point to spawn
-                if (IsAboveNavMesh())
-                {
+                //if (IsAboveNavMesh())
+                //{
                     //start spawning and stop moving
                     StartCoroutine("SpawnEnemy");
                     portalEffect.SetActive(true);
                     target = Vector3.zero;
-                }
+                //}
                 //else pick a new move target
                 //else
                 //{

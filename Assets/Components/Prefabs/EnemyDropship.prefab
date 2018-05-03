@@ -1610,6 +1610,9 @@ MonoBehaviour:
   spawnTime: 2
   enemiesCount: 5
   portalEffect: {fileID: 1841885685540496}
+  mask:
+    serializedVersion: 2
+    m_Bits: 4294967039
 --- !u!120 &120039427954119426
 LineRenderer:
   m_ObjectHideFlags: 1
