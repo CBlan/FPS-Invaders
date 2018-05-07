@@ -55,7 +55,8 @@ public class EnemyAI : MonoBehaviour {
                 agent.enabled = true;
                 transform.GetChild(0).gameObject.GetComponent<Motion_Bobbing>().enabled = true;
                 thrusters.SetActive(true);
-                rB.isKinematic = true;
+                //rB.isKinematic = true;
+                rB.drag = 1000;
             }
         }
 
