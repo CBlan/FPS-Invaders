@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: MicroSplat
   m_Shader: {fileID: 4800000, guid: 84b79456b9506034fa0d7cdf61f3294e, type: 3}
-  m_ShaderKeywords: _MICROSPLAT _MSRENDERLOOP_SURFACESHADER
+  m_ShaderKeywords: _MICROSPLAT _PERTEXUVSCALEOFFSET
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
