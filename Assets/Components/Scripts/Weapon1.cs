@@ -27,9 +27,20 @@ public class Weapon1 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        for (int i = 0; i < muzzles.Length; i++)
+        if (TargetObject.tarObj.target != null)
         {
-            muzzles[i].transform.LookAt(TargetObject.tarObj.hitPoint);
+            for (int i = 0; i < muzzles.Length; i++)
+            {
+                muzzles[i].transform.LookAt(TargetObject.tarObj.hitPoint);
+            }
+        }
+        else
+        {
+            for (int i = 0; i < muzzles.Length; i++)
+            {
+                //print("null");
+                muzzles[i].transform.rotation = transform.rotation;
+            }
         }
 	}
 
