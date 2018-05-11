@@ -7,7 +7,10 @@ public class PlayerInput : MonoBehaviour {
     public float stepSpeed = 10;
     private GameObject targetPoint;
     public GameObject currentPoint;
-
+    private Vector3 midPoint;
+    private Vector3 startPoint;
+    private bool hasPassedMid = false;
+    private float zoomAmmount = 60f;
 
     public delegate void Weapon1Fire();
     public static event Weapon1Fire Weapon1Fired;
@@ -27,6 +30,10 @@ public class PlayerInput : MonoBehaviour {
         if (Input.GetButton("Fire3") && TargetObject.tarObj.target != null && TargetObject.tarObj.target.tag == "Defence Point")
         {
             targetPoint = TargetObject.tarObj.target;
+
+            midPoint = (transform.position + TargetObject.tarObj.target.gameObject.transform.position) / 2;
+            startPoint = transform.position;
+
             if (currentPoint != null)
             {
                 currentPoint.SetActive(true);
@@ -37,12 +44,27 @@ public class PlayerInput : MonoBehaviour {
         if (targetPoint != null)
         {
             float step = stepSpeed * Time.deltaTime;
+            
             transform.position = Vector3.MoveTowards(transform.position, targetPoint.transform.position, step);
+
+            if (!hasPassedMid)
+            {
+                Camera.main.fieldOfView -= zoomAmmount * Time.deltaTime;
+                if (!IsBetween(startPoint, midPoint, transform.position))
+                {
+
+                    hasPassedMid = true;
+                }
+            }
+            else Camera.main.fieldOfView += zoomAmmount * Time.deltaTime;
+
+
 
             if (transform.position == targetPoint.transform.position)
             {
-
+                Camera.main.fieldOfView = 60;
                 targetPoint = null;
+                hasPassedMid = false;
             }
         }
 
@@ -76,6 +98,11 @@ public class PlayerInput : MonoBehaviour {
             currentPoint = other.gameObject;
             other.gameObject.SetActive(false);
         }
+    }
+
+    bool IsBetween(Vector3 start, Vector3 end, Vector3 objPosition)
+    {
+        return Vector3.Dot((end - start).normalized, (objPosition - end).normalized) < 0f && Vector3.Dot((start - end).normalized, (objPosition - start).normalized) < 0f;
     }
 }
 
