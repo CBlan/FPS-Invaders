@@ -36,4 +36,4 @@ Material:
     - _EmissionLM: 0
     - _InvFade: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.46966913, g: 0.6066431, b: 0.875, a: 1}

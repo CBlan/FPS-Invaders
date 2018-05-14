@@ -11,6 +11,9 @@ public class PlayerInput : MonoBehaviour {
     private Vector3 startPoint;
     private bool hasPassedMid = false;
     private float zoomAmmount = 60f;
+    public GameObject speedParticle;
+    public MouseLook lookScript;
+    public GameObject ret;
 
     public delegate void Weapon1Fire();
     public static event Weapon1Fire Weapon1Fired;
@@ -20,8 +23,9 @@ public class PlayerInput : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
-	}
+        speedParticle.SetActive(false);
+        ret.SetActive(true);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -33,6 +37,11 @@ public class PlayerInput : MonoBehaviour {
 
             midPoint = (transform.position + TargetObject.tarObj.target.gameObject.transform.position) / 2;
             startPoint = transform.position;
+
+            speedParticle.SetActive(true);
+            lookScript.enabled = false;
+            ret.SetActive(false);
+            transform.LookAt(targetPoint.transform);
 
             if (currentPoint != null)
             {
@@ -65,6 +74,9 @@ public class PlayerInput : MonoBehaviour {
                 Camera.main.fieldOfView = 60;
                 targetPoint = null;
                 hasPassedMid = false;
+                speedParticle.SetActive(false);
+                ret.SetActive(true);
+                lookScript.enabled = true;
             }
         }
 
