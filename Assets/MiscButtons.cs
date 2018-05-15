@@ -22,6 +22,11 @@ public class MiscButtons : MonoBehaviour {
 
     public void StartGame()
     {
+        SceneManager.LoadScene("LoadScene");
+    }
+
+    public void LoadMain()
+    {
         SceneManager.LoadScene("Main");
     }
 }

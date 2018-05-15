@@ -3,7 +3,32 @@ guid: 57f624d7fff77974b92b9e100c78f7d1
 timeCreated: 1526346692
 licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: buttonback2_0
+    21300002: buttonback2_1
+    21300004: buttonback2_2
+    21300006: buttonback2_3
+    21300008: buttonback2_4
+    21300010: buttonback2_5
+    21300012: buttonback2_6
+    21300014: buttonback2_7
+    21300016: buttonback2_8
+    21300018: buttonback2_9
+    21300020: buttonback2_10
+    21300022: buttonback2_11
+    21300024: buttonback2_12
+    21300026: buttonback2_13
+    21300028: buttonback2_14
+    21300030: buttonback2_15
+    21300032: buttonback2_16
+    21300034: buttonback2_17
+    21300036: buttonback2_18
+    21300038: buttonback2_19
+    21300040: buttonback2_20
+    21300042: buttonback2_21
+    21300044: buttonback2_22
+    21300046: buttonback2_23
+    21300048: buttonback2_24
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -40,7 +65,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -86,9 +111,389 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: buttonback2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1227
+        width: 728
+        height: 824
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: buttonback2_1
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 1227
+        width: 728
+        height: 824
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: buttonback2_2
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 1227
+        width: 728
+        height: 824
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: buttonback2_3
+      rect:
+        serializedVersion: 2
+        x: 2187
+        y: 1227
+        width: 728
+        height: 824
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: buttonback2_4
+      rect:
+        serializedVersion: 2
+        x: 2916
+        y: 1226
+        width: 728
+        height: 824
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: buttonback2_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 822
+        width: 728
+        height: 824
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: buttonback2_6
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 814
+        width: 728
+        height: 824
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: buttonback2_7
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 818
+        width: 732
+        height: 823
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: buttonback2_8
+      rect:
+        serializedVersion: 2
+        x: 2187
+        y: 1231
+        width: 728
+        height: 410
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: buttonback2_9
+      rect:
+        serializedVersion: 2
+        x: 2916
+        y: 1230.8
+        width: 729.2
+        height: 410.2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: buttonback2_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 820.8
+        width: 729.2
+        height: 410.2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: buttonback2_11
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 820.8
+        width: 729.2
+        height: 410.2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: buttonback2_12
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 820.8
+        width: 729.2
+        height: 410.2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: buttonback2_13
+      rect:
+        serializedVersion: 2
+        x: 2187
+        y: 820.8
+        width: 729.2
+        height: 410.2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: buttonback2_14
+      rect:
+        serializedVersion: 2
+        x: 2916
+        y: 820.8
+        width: 729.2
+        height: 410.2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: buttonback2_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 410.8
+        width: 729.2
+        height: 410.2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: buttonback2_16
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 410.8
+        width: 729.2
+        height: 410.2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: buttonback2_17
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 410.8
+        width: 729.2
+        height: 410.2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: buttonback2_18
+      rect:
+        serializedVersion: 2
+        x: 2187
+        y: 410.8
+        width: 729.2
+        height: 410.2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: buttonback2_19
+      rect:
+        serializedVersion: 2
+        x: 2916
+        y: 410.8
+        width: 729.2
+        height: 410.2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: buttonback2_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.7999878
+        width: 729.2
+        height: 410.2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: buttonback2_21
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 0.7999878
+        width: 729.2
+        height: 410.2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: buttonback2_22
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 0.7999878
+        width: 729.2
+        height: 410.2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: buttonback2_23
+      rect:
+        serializedVersion: 2
+        x: 2187
+        y: 0.7999878
+        width: 729.2
+        height: 410.2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: buttonback2_24
+      rect:
+        serializedVersion: 2
+        x: 2916
+        y: 0.7999878
+        width: 729.2
+        height: 410.2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
