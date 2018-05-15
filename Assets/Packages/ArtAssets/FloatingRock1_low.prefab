@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 23204468193487610}
   - component: {fileID: 135463552158148302}
   - component: {fileID: 64547409393553346}
-  - component: {fileID: 114013238338466750}
   m_Layer: 0
   m_Name: FloatingRock1_low
   m_TagString: Untagged
@@ -196,19 +195,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114013238338466750
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1344858449891834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dd76164aa55d7f4e85b9e1675a92af1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  amplitude: 0.9
-  frequency: 0.9
 --- !u!135 &135463552158148302
 SphereCollider:
   m_ObjectHideFlags: 1
