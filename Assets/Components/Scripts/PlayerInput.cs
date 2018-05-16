@@ -30,6 +30,10 @@ public class PlayerInput : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        if (PauseManager.instance.paused)
+        {
+            return;
+        }
         //input point to move to
         if (Input.GetButton("Fire3") && TargetObject.tarObj.target != null && TargetObject.tarObj.target.tag == "Defence Point")
         {
