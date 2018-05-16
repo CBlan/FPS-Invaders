@@ -11,7 +11,7 @@ public class PauseManager : MonoBehaviour
 
     public static PauseManager instance;
 
-    private void Start()
+    private void Awake()
     {
         instance = this;
         Cursor.visible = paused;

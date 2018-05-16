@@ -24,10 +24,12 @@ public class GameManager : MonoBehaviour {
     void Start () {
         GM = this;
         StartCoroutine("SpawnDropShips");
+        PauseManager.instance.PauseGame();
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+
+    // Update is called once per frame
+    void Update () {
 
         for (var i = portals.Count - 1; i > -1; i--)
         {
