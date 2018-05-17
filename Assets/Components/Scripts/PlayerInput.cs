@@ -25,6 +25,7 @@ public class PlayerInput : MonoBehaviour {
     void Start () {
         speedParticle.SetActive(false);
         ret.SetActive(true);
+        StartCoroutine("StartMouseLook");
     }
 	
 	// Update is called once per frame
@@ -119,6 +120,13 @@ public class PlayerInput : MonoBehaviour {
     bool IsBetween(Vector3 start, Vector3 end, Vector3 objPosition)
     {
         return Vector3.Dot((end - start).normalized, (objPosition - end).normalized) < 0f && Vector3.Dot((start - end).normalized, (objPosition - start).normalized) < 0f;
+    }
+
+    IEnumerator StartMouseLook()
+    {
+        yield return new WaitForSeconds(0.1f);
+        lookScript.enabled = true;
+        yield break;
     }
 }
 

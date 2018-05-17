@@ -8,6 +8,8 @@ public class PauseManager : MonoBehaviour
     public KeyCode pauseButton;
     public GameObject pausePanel;
     public bool paused = false;
+    public GameObject playerTut;
+    public GameObject pauseScreen;
 
     public static PauseManager instance;
 
@@ -23,6 +25,8 @@ public class PauseManager : MonoBehaviour
         if (Input.GetKeyDown(pauseButton))
         {
             PauseGame();
+            playerTut.SetActive(false);
+            pauseScreen.SetActive(true);
         }
     }
 
