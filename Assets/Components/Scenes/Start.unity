@@ -14,12 +14,12 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 8
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_FogMode: 3
-  m_FogDensity: 0.01
+  m_Fog: 1
+  m_FogColor: {r: 0, g: 0, b: 0, a: 1}
+  m_FogMode: 1
+  m_FogDensity: 0
   m_LinearFogStart: 0
-  m_LinearFogEnd: 300
+  m_LinearFogEnd: 400
   m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
@@ -746,6 +746,22 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2bf6dd078f42d47499045976eb69eeed, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &618591578 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1702434721018894, guid: 2bf6dd078f42d47499045976eb69eeed,
+    type: 2}
+  m_PrefabInternal: {fileID: 618591577}
+--- !u!114 &618591579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 618591578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fc704220341c240b91414bccd1856a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &639083287
 Prefab:
   m_ObjectHideFlags: 0
@@ -853,7 +869,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 732190463}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 459, y: 25.6, z: 294}
+  m_LocalPosition: {x: 459, y: 29.2, z: 106.7}
   m_LocalScale: {x: 184.66496, y: 184.66507, z: 184.66507}
   m_Children: []
   m_Father: {fileID: 0}
@@ -898,7 +914,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.5631488, g: 0.62325495, b: 0.9117647, a: 1}
-  m_Intensity: 3.79
+  m_Intensity: 1
   m_Range: 277.76
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -1093,11 +1109,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4124521207225730, guid: 127159e13af1669459641e3648247fe5, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 42.4
+      value: 73.2
       objectReference: {fileID: 0}
     - target: {fileID: 4124521207225730, guid: 127159e13af1669459641e3648247fe5, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 151.6
+      value: 183.4
       objectReference: {fileID: 0}
     - target: {fileID: 4124521207225730, guid: 127159e13af1669459641e3648247fe5, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1122,19 +1138,19 @@ Prefab:
     - target: {fileID: 23392353995642886, guid: 127159e13af1669459641e3648247fe5,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4124521207225730, guid: 127159e13af1669459641e3648247fe5, type: 2}
       propertyPath: m_LocalScale.x
-      value: 83.58178
+      value: 24.449179
       objectReference: {fileID: 0}
     - target: {fileID: 4124521207225730, guid: 127159e13af1669459641e3648247fe5, type: 2}
       propertyPath: m_LocalScale.y
-      value: 83.58169
+      value: 24.449179
       objectReference: {fileID: 0}
     - target: {fileID: 4124521207225730, guid: 127159e13af1669459641e3648247fe5, type: 2}
       propertyPath: m_LocalScale.z
-      value: 83.58169
+      value: 24.449179
       objectReference: {fileID: 0}
     - target: {fileID: 4532922999470650, guid: 127159e13af1669459641e3648247fe5, type: 2}
       propertyPath: m_LocalScale.x
@@ -1160,7 +1176,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4532922999470650, guid: 127159e13af1669459641e3648247fe5, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.36
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4532922999470650, guid: 127159e13af1669459641e3648247fe5, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1169,6 +1185,11 @@ Prefab:
     - target: {fileID: 4532922999470650, guid: 127159e13af1669459641e3648247fe5, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198748832547504592, guid: 127159e13af1669459641e3648247fe5,
+        type: 2}
+      propertyPath: InitialModule.startSize.scalar
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 135000944895192730, guid: 127159e13af1669459641e3648247fe5, type: 2}

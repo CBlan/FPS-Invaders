@@ -25,7 +25,10 @@ public class PauseManager : MonoBehaviour
         if (Input.GetKeyDown(pauseButton))
         {
             PauseGame();
-            playerTut.SetActive(false);
+            foreach (Transform child in pausePanel.transform)
+            {
+                child.gameObject.SetActive(false);
+            }
             pauseScreen.SetActive(true);
         }
     }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -20,11 +21,13 @@ public class GameManager : MonoBehaviour {
     private GameObject dropshipSpawned;
     public GameObject winPannel;
     public GameObject lossPannel;
+    private bool hasFin;
     // Use this for initialization
     void Start () {
         GM = this;
         StartCoroutine("SpawnDropShips");
         PauseManager.instance.PauseGame();
+        //CameraFade.StartAlphaFade(Color.black, true, 5f);
     }
 
 
@@ -43,28 +46,34 @@ public class GameManager : MonoBehaviour {
                 enemies.RemoveAt(i);
         }
 
-        if (dropshipsSpawned == dropShipsToSpawn && enemies.Count == 0 )
+        if (dropshipsSpawned == dropShipsToSpawn && enemies.Count == 0 && !hasFin)
         {
-            GameWon();
+            StartCoroutine("GameWon");
+            hasFin = true;
         }
 
-        if (portals.Count == 0)
+        if (portals.Count == 0 && !hasFin)
         {
-            GameLost();
+            StartCoroutine("GameLost");
+            hasFin = true;
         }
 
     }
 
-    void GameWon()
+    IEnumerator GameWon()
     {
-        //print("Won Game");
-        winPannel.SetActive(true);
+        CameraFade.StartAlphaFade(Color.black, false, 5f);
+        yield return new WaitForSeconds(2.3f);
+        SceneManager.LoadScene("Win");
+        yield break;
     }
 
-    void GameLost()
+    IEnumerator GameLost()
     {
-        //print("Lost Game");
-        lossPannel.SetActive(true);
+        CameraFade.StartAlphaFade(Color.black, false, 5f);
+        yield return new WaitForSeconds(2.3f);
+        SceneManager.LoadScene("Loss");
+        yield break;
     }
 
     IEnumerator SpawnDropShips()
