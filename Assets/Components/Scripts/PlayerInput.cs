@@ -36,7 +36,7 @@ public class PlayerInput : MonoBehaviour {
             return;
         }
         //input point to move to
-        if (Input.GetButton("Fire3") && TargetObject.tarObj.target != null && TargetObject.tarObj.target.tag == "Defence Point")
+        if (Input.GetButton("Fire2") && TargetObject.tarObj.target != null && TargetObject.tarObj.target.tag == "Defence Point")
         {
             targetPoint = TargetObject.tarObj.target;
 
@@ -96,7 +96,7 @@ public class PlayerInput : MonoBehaviour {
                 }
             }
 
-            if (Input.GetButtonDown("Fire2"))
+            if (Input.GetButtonDown("Fire3"))
             {
                 if (Weapon2Fired != null)
                 {

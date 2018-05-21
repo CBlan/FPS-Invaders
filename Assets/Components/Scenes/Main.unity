@@ -11479,6 +11479,16 @@ Prefab:
       propertyPath: m_Name
       value: ObeliskBot_low (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1552253033225450, guid: 60c8ae3df5894134db9a61219d0eb832, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114519210997053386, guid: 60c8ae3df5894134db9a61219d0eb832,
+        type: 2}
+      propertyPath: destroyEffect
+      value: 
+      objectReference: {fileID: 1453728701466468, guid: 1f532ed3b0fb82e41bdede1c20f9a5b3,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 60c8ae3df5894134db9a61219d0eb832, type: 2}
   m_IsPrefabParent: 0
@@ -40530,6 +40540,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114519210997053386, guid: 60c8ae3df5894134db9a61219d0eb832,
+        type: 2}
+      propertyPath: destroyEffect
+      value: 
+      objectReference: {fileID: 1453728701466468, guid: 1f532ed3b0fb82e41bdede1c20f9a5b3,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 60c8ae3df5894134db9a61219d0eb832, type: 2}
   m_IsPrefabParent: 0
@@ -74746,7 +74762,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Look at these points and press [E] to swap positions
+  m_Text: Look at these points and [Right Click] to swap positions
 --- !u!222 &1781713336
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -92874,7 +92890,7 @@ MonoBehaviour:
     [Left Click] - Fire weapon
 
 
-    [E] - Switch points when looking at another point
+    [Right Click] - Switch points when looking at another point
 
 
     [Esc] - Pause game'

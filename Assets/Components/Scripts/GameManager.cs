@@ -37,7 +37,9 @@ public class GameManager : MonoBehaviour {
         for (var i = portals.Count - 1; i > -1; i--)
         {
             if (portals[i] == null)
+            {
                 portals.RemoveAt(i);
+            }
         }
 
         for (var i = enemies.Count - 1; i > -1; i--)
@@ -62,6 +64,7 @@ public class GameManager : MonoBehaviour {
 
     IEnumerator GameWon()
     {
+        yield return new WaitForSeconds(2.3f);
         CameraFade.StartAlphaFade(Color.black, false, 5f);
         yield return new WaitForSeconds(2.3f);
         SceneManager.LoadScene("Win");
@@ -70,6 +73,7 @@ public class GameManager : MonoBehaviour {
 
     IEnumerator GameLost()
     {
+        yield return new WaitForSeconds(2.3f);
         CameraFade.StartAlphaFade(Color.black, false, 5f);
         yield return new WaitForSeconds(2.3f);
         SceneManager.LoadScene("Loss");
