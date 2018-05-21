@@ -39,13 +39,17 @@ public class GameManager : MonoBehaviour {
             if (portals[i] == null)
             {
                 portals.RemoveAt(i);
+                Camera.main.GetComponent<Motion_Shake>().Shake(0.5f, 1f);
             }
         }
 
         for (var i = enemies.Count - 1; i > -1; i--)
         {
             if (enemies[i] == null)
+            {
                 enemies.RemoveAt(i);
+                Camera.main.GetComponent<Motion_Shake>().Shake(0.1f, 0.2f);
+            }
         }
 
         if (dropshipsSpawned == dropShipsToSpawn && enemies.Count == 0 && !hasFin)

@@ -1616,13 +1616,13 @@ MonoBehaviour:
   target: {fileID: 0}
   activationHeight: 2.5
   enemyDamage: 50
-  explosionEffect: {fileID: 1901669774314338, guid: 2ae8e91ca1ac2bf41bfb796771897c7a,
+  explosionEffect: {fileID: 1120525699104104, guid: 2ae8e91ca1ac2bf41bfb796771897c7a,
     type: 2}
   mask:
     serializedVersion: 2
     m_Bits: 4294967039
   thrusters: {fileID: 1166450411775382}
-  landingEffect: {fileID: 1155140313597002, guid: 408af7fd951bc1844a03ff45936eac3d,
+  landingEffect: {fileID: 1643706311493222, guid: 408af7fd951bc1844a03ff45936eac3d,
     type: 2}
 --- !u!114 &114397260544456058
 MonoBehaviour:
@@ -1662,7 +1662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hP: 100
-  destroyEffect: {fileID: 1901669774314338, guid: 2ae8e91ca1ac2bf41bfb796771897c7a,
+  destroyEffect: {fileID: 1120525699104104, guid: 2ae8e91ca1ac2bf41bfb796771897c7a,
     type: 2}
 --- !u!135 &135695232022271876
 SphereCollider:
