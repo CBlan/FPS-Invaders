@@ -51,7 +51,7 @@ LightmapSettings:
     m_AlbedoBoost: 1
     m_TemporalCoherenceThreshold: 1
     m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 0
+    m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
     serializedVersion: 9
@@ -23522,7 +23522,7 @@ MonoBehaviour:
   dropshipPrefab: {fileID: 1798466078253538, guid: d166f771434fb5447a3d4eeca925f5cb,
     type: 2}
   dropShipsToSpawn: 10
-  timeBetweenSpawns: 5
+  timeBetweenSpawns: 8
   winPannel: {fileID: 1225497703}
   lossPannel: {fileID: 138579499}
 --- !u!4 &673064922

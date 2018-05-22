@@ -3893,5 +3893,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Reflect: 0
-  hitDamage: 100
+  hitDamage: 25
   HitEffect: {fileID: 100004, guid: 52607af86c6d2ae4883655812848d5be, type: 2}

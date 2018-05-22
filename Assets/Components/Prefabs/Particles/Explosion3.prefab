@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 114376474474868876}
   - component: {fileID: 114483549865989384}
   m_Layer: 0
-  m_Name: Explosion1
+  m_Name: Explosion3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -333,10 +333,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debrisPrefabs:
-  - {fileID: 4223792522276782, guid: 05778cf18f268f94cae16d6bcbe4bd41, type: 2}
+  - {fileID: 4421366130346624, guid: 92b2f2be3e3c4ee41abc7132b81d0f18, type: 2}
+  - {fileID: 4951846054370348, guid: 7781d77a58db91a47a67f72a96e0ad29, type: 2}
   firePrefab: {fileID: 400000, guid: bf495eacf58e31146ab012aa89ac68da, type: 2}
-  numDebrisPieces: 4
-  numFires: 4
+  numDebrisPieces: 2
+  numFires: 0
 --- !u!114 &114483549865989384
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -348,7 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ac1691131a8c844dafe8b6ace6a172a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionForce: 10
+  explosionForce: 15
 --- !u!114 &114884450322403598
 MonoBehaviour:
   m_ObjectHideFlags: 1

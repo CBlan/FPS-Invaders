@@ -1615,7 +1615,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   activationHeight: 2.5
-  enemyDamage: 50
+  enemyDamage: 35
   explosionEffect: {fileID: 1120525699104104, guid: 2ae8e91ca1ac2bf41bfb796771897c7a,
     type: 2}
   mask:

@@ -1584,8 +1584,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdfcb7922ce47ba418082bccb26eda8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hP: 200
-  destroyEffect: {fileID: 1901669774314338, guid: 2ae8e91ca1ac2bf41bfb796771897c7a,
+  hP: 400
+  destroyEffect: {fileID: 1120525699104104, guid: d42c193389043b44cb135f51b452fa7f,
     type: 2}
 --- !u!114 &114805880316285462
 MonoBehaviour:
@@ -1607,7 +1607,7 @@ MonoBehaviour:
   areaRangeZ: 20
   shipSpeed: 20
   target: {x: 0, y: 0, z: 0}
-  spawnTime: 2
+  spawnTime: 3
   enemiesCount: 5
   portalEffect: {fileID: 1841885685540496}
   mask:
