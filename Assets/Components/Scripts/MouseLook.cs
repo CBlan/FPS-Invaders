@@ -11,6 +11,14 @@ public class MouseLook : MonoBehaviour
     private float rotY = 0.0f; // rotation around the up/y axis
     private float rotX = 0.0f; // rotation around the right/x axis
 
+    private void Awake()
+    {
+        if (OptionsManager.oMInstance != null)
+        {
+            mouseSensitivity = OptionsManager.oMInstance.mouseSen;
+        }
+    }
+
     void Start()
     {
         Vector3 rot = transform.localRotation.eulerAngles;
