@@ -19,7 +19,16 @@ public class OptionsManager : MonoBehaviour {
             //Debug.Log("Awake: " + this.gameObject);
         }
 
-        oMInstance = this;
+
+        if (oMInstance == null)
+        {
+            oMInstance = this;
+        }
+
+        if (oMInstance != this)
+        {
+            Destroy(gameObject);
+        }
     }
 
 
