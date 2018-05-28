@@ -2750,6 +2750,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4933391138732228}
+  - component: {fileID: 114199179894990042}
   m_Layer: 0
   m_Name: ObeliskDestroy
   m_TagString: Untagged
@@ -28440,6 +28441,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.3879582, y: 1.3772707, z: 0.7127087}
   m_Center: {x: 0.3022303, y: 0.2602837, z: 1.1029482}
+--- !u!114 &114199179894990042
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1453728701466468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d42412bfe0773e45bf33484bf014c58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114647546161226618
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -30,6 +30,8 @@ public class DropshipAI : MonoBehaviour {
         dropArea = GameManager.GM.dropZones[Random.Range(0, GameManager.GM.dropZones.Length)];
 
         target = new Vector3(Random.Range(dropArea.position.x - areaRangeX, dropArea.position.x + areaRangeX), Random.Range(dropArea.position.y - areaRangeY, dropArea.position.y + areaRangeY), Random.Range(dropArea.position.z - areaRangeZ, dropArea.position.z + areaRangeZ));
+        Fabric.EventManager.Instance.PostEvent("DropShip/WarpIn", gameObject);
+        Fabric.EventManager.Instance.PostEvent("DropShip/Engine", gameObject);
     }
 	
 	// Update is called once per frame
@@ -57,9 +59,10 @@ public class DropshipAI : MonoBehaviour {
                 //if (IsAboveNavMesh())
                 //{
                     //start spawning and stop moving
-                    StartCoroutine("SpawnEnemy");
-                    portalEffect.SetActive(true);
-                    target = Vector3.zero;
+                StartCoroutine("SpawnEnemy");
+                Fabric.EventManager.Instance.PostEvent("DropShip/Dropping", gameObject);
+                portalEffect.SetActive(true);
+                target = Vector3.zero;
                 //}
                 //else pick a new move target
                 //else
@@ -71,6 +74,7 @@ public class DropshipAI : MonoBehaviour {
         //move away once finished spawning
         if (finishedSpawning)
         {
+            Fabric.EventManager.Instance.PostEvent("DropShip/Dropping", Fabric.EventAction.StopSound, null, gameObject);
             float step = shipSpeed * Time.deltaTime;
             portalEffect.SetActive(false);
             transform.Translate(Vector3.forward * step);

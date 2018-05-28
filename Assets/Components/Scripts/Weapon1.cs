@@ -49,6 +49,7 @@ public class Weapon1 : MonoBehaviour {
         //print("Weapon Fired");
         GameObject fireingMuzzle = muzzles[Random.Range(0, muzzles.Length)];
         Instantiate(bullet, fireingMuzzle.transform.position, fireingMuzzle.transform.rotation);
+        Fabric.EventManager.Instance.PostEvent("Player/Shoot");
         //bulletFired = Instantiate(bullet, fireingMuzzle.transform.position, fireingMuzzle.transform.rotation);
         //bulletFired.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);
         //bulletFired.GetComponent<BulletBehaviour>().damage = weaponDamage;

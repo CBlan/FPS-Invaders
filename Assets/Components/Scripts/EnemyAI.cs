@@ -21,6 +21,7 @@ public class EnemyAI : MonoBehaviour {
     void Start () {
         agent = GetComponent<NavMeshAgent>();
         rB = GetComponent<Rigidbody>();
+        Fabric.EventManager.Instance.PostEvent("Exploder/WarpIn", gameObject);
     }
 
     // Update is called once per frame
@@ -51,6 +52,8 @@ public class EnemyAI : MonoBehaviour {
             if (Physics.Raycast(ray, out hit, activationHeight, mask.value))
             {
                 landEffect = Instantiate(landingEffect, hit.point, Quaternion.identity);
+                Fabric.EventManager.Instance.PostEvent("Exploder/Activate", gameObject);
+                Fabric.EventManager.Instance.PostEvent("Exploder/Movement", gameObject);
                 //landEffect.transform.SetParent(this.gameObject.transform);
                 agent.enabled = true;
                 transform.GetChild(0).gameObject.GetComponent<Motion_Bobbing>().enabled = true;

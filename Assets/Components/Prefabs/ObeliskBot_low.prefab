@@ -79,6 +79,7 @@ GameObject:
   - component: {fileID: 64936211534100138}
   - component: {fileID: 114519210997053386}
   - component: {fileID: 54001382522910562}
+  - component: {fileID: 114949894311918582}
   m_Layer: 0
   m_Name: ObeliskBot_low
   m_TagString: Portal
@@ -92,8 +93,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1552253033225450}
-  m_LocalRotation: {x: 0.002585052, y: -0.99779975, z: 0.00017163764, w: 0.0662501}
-  m_LocalPosition: {x: -25.4, y: -2, z: -31.1}
+  m_LocalRotation: {x: 0.002585052, y: -0.99779975, z: 0.00017163763, w: 0.0662501}
+  m_LocalPosition: {x: 32.7, y: -2, z: 35.4}
   m_LocalScale: {x: 1, y: 0.79045, z: 1}
   m_Children:
   - {fileID: 4657084666412628}
@@ -319,7 +320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hP: 100
-  destroyEffect: {fileID: 1347467426502900, guid: 3373a230aba0e7045a34b28c75dfddd8,
+  destroyEffect: {fileID: 1453728701466468, guid: 1f532ed3b0fb82e41bdede1c20f9a5b3,
     type: 2}
 --- !u!114 &114697669226022576
 MonoBehaviour:
@@ -347,6 +348,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RotateSpeed: 4
   axis: {x: 0, y: 1, z: 0}
+--- !u!114 &114949894311918582
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1552253033225450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfe148f0cb0abe540a249e6907b170c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &136424896298994874
 CapsuleCollider:
   m_ObjectHideFlags: 1

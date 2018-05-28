@@ -12,6 +12,7 @@ public class TargetObject : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         tarObj = this;
+
 	}
 	
 	// Update is called once per frame

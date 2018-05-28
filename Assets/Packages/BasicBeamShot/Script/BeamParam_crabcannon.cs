@@ -21,7 +21,7 @@ public class BeamParam_crabcannon : MonoBehaviour {
 	void Start () {
 		BeamParam_crabcannon param = this.transform.root.gameObject.GetComponent<BeamParam_crabcannon>();
 
-		if(param != null)
+        if (param != null)
 		{
 			this.BeamColor = param.BeamColor;
 			this.AnimationSpd = param.AnimationSpd;
