@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerInput : MonoBehaviour {
 
@@ -104,6 +105,15 @@ public class PlayerInput : MonoBehaviour {
                     Weapon2Fired();
                 }
             }
+        }
+
+        if(TargetObject.tarObj.target != null && TargetObject.tarObj.target.tag == "Enemy")
+        {
+            ret.GetComponent<Image>().color = Color.red;
+        }
+        else
+        {
+            ret.GetComponent<Image>().color = Color.white;
         }
 
     }
