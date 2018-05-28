@@ -5975,7 +5975,7 @@ MonoBehaviour:
   _stealingBehaviour: 0
   _minimumPlaybackInterval: 0
   _overrideParentVolume: 0
-  _volume: 1
+  _volume: 0.07498942
   _volumeRandomization: 0
   _mute: 0
   _overrideParentPitch: 0
@@ -5984,9 +5984,9 @@ MonoBehaviour:
   _override2DProperties: 0
   _pan2D: 0
   _pan2DRandomization: 0
-  _override3DProperties: 0
+  _override3DProperties: 1
   _priority: 128
-  _panLevel: 1
+  _panLevel: 0
   _spreadLevel: 0
   _spatialize: 0
   _dopplerLevel: 1
@@ -8895,7 +8895,7 @@ MonoBehaviour:
   _stealingBehaviour: 0
   _minimumPlaybackInterval: 0
   _overrideParentVolume: 0
-  _volume: 1
+  _volume: 0.5495409
   _volumeRandomization: 0
   _mute: 0
   _overrideParentPitch: 0
@@ -14823,7 +14823,7 @@ MonoBehaviour:
   _stealingBehaviour: 0
   _minimumPlaybackInterval: 0
   _overrideParentVolume: 0
-  _volume: 0.0210084
+  _volume: 0.12605043
   _volumeRandomization: 0
   _mute: 0
   _overrideParentPitch: 0
@@ -18590,6 +18590,185 @@ Transform:
   m_PrefabParentObject: {fileID: 4766171785411630, guid: 947b65edf948380499881ea484bbea1b,
     type: 2}
   m_PrefabInternal: {fileID: 1540580036}
+--- !u!1 &507875884
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 507875885}
+  - component: {fileID: 507875887}
+  - component: {fileID: 507875886}
+  m_Layer: 0
+  m_Name: PlayerWarp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &507875885
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 507875884}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -478.16507, y: -267.34357, z: -0.18523502}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 625762343}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &507875886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 507875884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1137554331, guid: 4b4e8768ed04d6a4f98af6f4f83be984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _eventName: Player/Move
+  _eventID: -2115456449
+  _overrideEventTriggerAction: 0
+  _overrideParameters:
+    _overrideIncomingEventAction: 0
+    _incomingEventAction: 0
+    _overrideEventAction: 0
+    _type: 0
+    _floatParameter: 1
+    _stringParameter: 
+    _switchPresetData:
+      _sourcePreset: 
+      _targetPreset: 
+    _dspParameterData:
+      _dspType: 0
+      _parameter: 
+      _value: 0
+      _time: 0
+      _curve: 0.5
+    _transitionToSnapshotData:
+      _snapshot: 
+      _timeToReach: 0
+--- !u!114 &507875887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 507875884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -71199202, guid: 4b4e8768ed04d6a4f98af6f4f83be984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _numVirtualizationEvents: 100
+  _maxInstances: 1
+  _stealingBehaviour: 0
+  _minimumPlaybackInterval: 0
+  _overrideParentVolume: 0
+  _volume: 0.33496544
+  _volumeRandomization: 0
+  _mute: 0
+  _overrideParentPitch: 0
+  _pitch: 1
+  _pitchRandomization: 0
+  _override2DProperties: 0
+  _pan2D: 0
+  _pan2DRandomization: 0
+  _override3DProperties: 0
+  _priority: 128
+  _panLevel: 1
+  _spreadLevel: 0
+  _spatialize: 0
+  _dopplerLevel: 1
+  _maxDistance: 500
+  _minDistance: 1
+  _rolloffMode: 0
+  _customCurvesType: 0
+  _customCurvesName: 
+  _overrideFadeProperties: 0
+  _fadeInTime: 0
+  _fadeInCurve: 0.5
+  _fadeOutTime: 0
+  _fadeOutCurve: 0.5
+  _reverbZoneMix: 1
+  _overrideBypassProperties: 0
+  _bypassEffects: 0
+  _bypassListenerEffects: 0
+  _bypassReverbZones: 0
+  _overrideAudioMixerGroup: 0
+  _audioMixerGroup: {fileID: 0}
+  _notifyParentComponent: 0
+  _audioBusName: 
+  _overrideAudioBus: 0
+  _overrideMusicTimeSettings: 0
+  _musicTimeSettingsIndex: -1
+  _musicTempo: -1
+  _musicTimeSignatureLower: 0
+  _musicTimeSignatureUpper: 0
+  _musicTimeResetOnPlay: 0
+  _midiProperties:
+    _overrideParentNoteTracking: 0
+    _noteTracking: 0
+    _keyRangeMin: 0
+    _keyRangeMax: 127
+    _velocityRangeMin: 0
+    _velocityRangeMax: 127
+    _channelRangeMin: 1
+    _channelRangeMax: 16
+    _rootNote: -36
+    _transpose: 0
+    _velocity: 0
+  _overrideSpatializeProperty: 0
+  _probability: 100
+  _multipleInstancesPerGameObject: 1
+  _componentVirtualization: 0
+  _overrideVolumeThreshold: 0
+  _volumeThreshold: 1
+  _virtualizationBehavior: 1
+  _RTPManager:
+    _parameters: []
+    _reference: {fileID: 0}
+  Guid: 
+  _componentHolder: {fileID: 0}
+  _onEventNotifyEventName: 
+  _audioClip: {fileID: 8300000, guid: 8888e2145510b9446ab1bd6c9372cffb, type: 3}
+  _audioClipHandle:
+    _audioClipPath: 
+    _useAudioClipPath: 1
+  _dynamicAudioClipLoading: 0
+  _dynamicAudioClipUnloadDelay: 0
+  _dynamicAsyncAudioClipLoading: 0
+  _audioClipAssetPath: 0
+  _delay: 0
+  _delayInBeats: 0
+  _loop: 0
+  _ignoreNativeLoop: 0
+  _randomizeStart: 0
+  _randomizeStartPercentage: 100
+  _numLoops: -1
+  _loopMarkersLoaded: 0
+  _useLoopMarkers: 1
+  _startLoopMarkerIndex: 0
+  _endLoopMarkerIndex: 1
+  _loopRegionIndex: 0
+  _randomizeStartLoopMarkerIndex: 0
+  _randomizeEndLoopMarkerIndex: 0
+  _randomizeRegionIndex: 0
+  _dontPlay: 0
+  _dontStopOnDestroy: 0
+  _ignoreVirtualization: 0
+  _randomizePosition: 0
+  _randomizeMinPosition: 0
+  _randomizeMaxPosition: 10
+  _syncWithMusicTime: 0
+  _markers: []
+  _syncRegionsWithTempo: 0
+  _audioClipTempo: 120
+  _regions: []
 --- !u!4 &508263418 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4257301654285234, guid: fc2bea354acf81f4280606bd7c2c1e7e,
@@ -19125,14 +19304,14 @@ MonoBehaviour:
   _override2DProperties: 0
   _pan2D: 0
   _pan2DRandomization: 0
-  _override3DProperties: 0
+  _override3DProperties: 1
   _priority: 128
   _panLevel: 1
   _spreadLevel: 0
   _spatialize: 0
   _dopplerLevel: 1
-  _maxDistance: 500
-  _minDistance: 1
+  _maxDistance: 800
+  _minDistance: 10
   _rolloffMode: 0
   _customCurvesType: 0
   _customCurvesName: 
@@ -22714,6 +22893,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 177238767}
+  - {fileID: 507875885}
   m_Father: {fileID: 672391282}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25340,7 +25520,6 @@ MonoBehaviour:
   - Exploder/Explosion
   - Exploder/Movement
   - Exploder/WarpIn
-  - Player/Hum
   - Player/Move
   - Player/Shoot
   - Player/Start
@@ -25862,7 +26041,7 @@ MonoBehaviour:
   _stealingBehaviour: 0
   _minimumPlaybackInterval: 0
   _overrideParentVolume: 0
-  _volume: 1
+  _volume: 0.38904515
   _volumeRandomization: 0
   _mute: 0
   _overrideParentPitch: 0
@@ -39757,7 +39936,7 @@ MonoBehaviour:
   _stealingBehaviour: 0
   _minimumPlaybackInterval: 0
   _overrideParentVolume: 0
-  _volume: 1
+  _volume: 0.3019952
   _volumeRandomization: 0
   _mute: 0
   _overrideParentPitch: 0
@@ -42817,8 +42996,8 @@ MonoBehaviour:
   _spreadLevel: 0
   _spatialize: 0
   _dopplerLevel: 1
-  _maxDistance: 500
-  _minDistance: 1
+  _maxDistance: 600
+  _minDistance: 5
   _rolloffMode: 0
   _customCurvesType: 0
   _customCurvesName: 
@@ -46754,7 +46933,7 @@ MonoBehaviour:
   _stealingBehaviour: 0
   _minimumPlaybackInterval: 0
   _overrideParentVolume: 0
-  _volume: 1
+  _volume: 0.5956622
   _volumeRandomization: 0
   _mute: 0
   _overrideParentPitch: 0
@@ -67844,14 +68023,14 @@ MonoBehaviour:
   _override2DProperties: 0
   _pan2D: 0
   _pan2DRandomization: 0
-  _override3DProperties: 0
+  _override3DProperties: 1
   _priority: 128
   _panLevel: 1
   _spreadLevel: 0
   _spatialize: 0
   _dopplerLevel: 1
-  _maxDistance: 500
-  _minDistance: 1
+  _maxDistance: 800
+  _minDistance: 10
   _rolloffMode: 0
   _customCurvesType: 0
   _customCurvesName: 
@@ -80982,7 +81161,7 @@ MonoBehaviour:
   _spatialize: 0
   _dopplerLevel: 1
   _maxDistance: 500
-  _minDistance: 1
+  _minDistance: 25
   _rolloffMode: 0
   _customCurvesType: 0
   _customCurvesName: 

@@ -44,6 +44,7 @@ public class PlayerInput : MonoBehaviour {
             startPoint = transform.position;
 
             speedParticle.SetActive(true);
+            Fabric.EventManager.Instance.PostEvent("Player/Move", gameObject);
             lookScript.enabled = false;
             ret.SetActive(false);
             transform.LookAt(targetPoint.transform);
