@@ -15,6 +15,7 @@ public class PlayerInput : MonoBehaviour {
     public GameObject speedParticle;
     public MouseLook lookScript;
     public GameObject ret;
+    private Image retImage;
 
     public delegate void Weapon1Fire();
     public static event Weapon1Fire Weapon1Fired;
@@ -27,6 +28,7 @@ public class PlayerInput : MonoBehaviour {
         speedParticle.SetActive(false);
         ret.SetActive(true);
         StartCoroutine("StartMouseLook");
+        retImage = ret.GetComponent<Image>();
     }
 	
 	// Update is called once per frame
@@ -109,11 +111,17 @@ public class PlayerInput : MonoBehaviour {
 
         if(TargetObject.tarObj.target != null && TargetObject.tarObj.target.tag == "Enemy")
         {
-            ret.GetComponent<Image>().color = Color.red;
+            retImage.color = Color.red;
         }
+
+        else if (TargetObject.tarObj.target != null && TargetObject.tarObj.target.tag == "Defence Point")
+        {
+            retImage.color = Color.green;
+        }
+
         else
         {
-            ret.GetComponent<Image>().color = Color.white;
+            retImage.color = Color.white;
         }
 
     }

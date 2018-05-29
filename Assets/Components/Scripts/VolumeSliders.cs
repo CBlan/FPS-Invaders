@@ -6,9 +6,7 @@ using UnityEngine.Audio;
 
 public class VolumeSliders : MonoBehaviour {
 
-    public Slider volSlider;
     public AudioMixer mixer;
-    //private float value;
 
 	// Use this for initialization
 	void Start () {
@@ -17,8 +15,8 @@ public class VolumeSliders : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        mixer.SetFloat("Volume", volSlider.value);
-        //mixer.GetFloat("Volume", out value);
-        //print(value);
+
+        mixer.SetFloat("Volume", OptionsManager.oMInstance.volume);
+
 	}
 }

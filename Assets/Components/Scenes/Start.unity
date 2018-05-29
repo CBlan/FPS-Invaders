@@ -432,6 +432,7 @@ GameObject:
   - component: {fileID: 289125649}
   - component: {fileID: 289125648}
   - component: {fileID: 289125652}
+  - component: {fileID: 289125653}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -557,6 +558,17 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &289125653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 289125647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dcb5972a1cd5d54eb2592a8d63d57ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &298325398
 GameObject:
   m_ObjectHideFlags: 0
@@ -1890,6 +1902,48 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 749258854}
+--- !u!1001 &762810307
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4216842025671844, guid: 89f1b0ea6d6e04543a3732eee543b171, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.7344017
+      objectReference: {fileID: 0}
+    - target: {fileID: 4216842025671844, guid: 89f1b0ea6d6e04543a3732eee543b171, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5.131855
+      objectReference: {fileID: 0}
+    - target: {fileID: 4216842025671844, guid: 89f1b0ea6d6e04543a3732eee543b171, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 15.631836
+      objectReference: {fileID: 0}
+    - target: {fileID: 4216842025671844, guid: 89f1b0ea6d6e04543a3732eee543b171, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4216842025671844, guid: 89f1b0ea6d6e04543a3732eee543b171, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4216842025671844, guid: 89f1b0ea6d6e04543a3732eee543b171, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4216842025671844, guid: 89f1b0ea6d6e04543a3732eee543b171, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4216842025671844, guid: 89f1b0ea6d6e04543a3732eee543b171, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 89f1b0ea6d6e04543a3732eee543b171, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &766170956
 GameObject:
   m_ObjectHideFlags: 0
@@ -5725,6 +5779,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114621089260534450, guid: f6d9086f34f4cb34683b3f309dc698fe,
+        type: 2}
+      propertyPath: volume
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f6d9086f34f4cb34683b3f309dc698fe, type: 2}
   m_IsPrefabParent: 0
@@ -5964,7 +6023,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mouse Sensitivity
+  m_Text: Aim Sensitivity
 --- !u!222 &983998287
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6105,7 +6164,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 618591578}
+      objectReference: {fileID: 618591580}
     - target: {fileID: 114035362219881040, guid: 3f2b6dc13b671704fb2a3e75adbb591f,
         type: 2}
       propertyPath: inRingRotate
@@ -6141,6 +6200,11 @@ Prefab:
       propertyPath: outBlip2Rotate
       value: 
       objectReference: {fileID: 1014274480}
+    - target: {fileID: 114910378354409148, guid: 3f2b6dc13b671704fb2a3e75adbb591f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: 0}
@@ -12047,8 +12111,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 1837708379}
   m_HandleRect: {fileID: 1157823149}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 100
+  m_MinValue: -80
+  m_MaxValue: 20
   m_WholeNumbers: 0
   m_Value: 50
   m_OnValueChanged:
