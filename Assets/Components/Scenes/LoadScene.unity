@@ -541,6 +541,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 3.1267073
       objectReference: {fileID: 0}
+    - target: {fileID: 114494858783460976, guid: b3b3df70ff866af46a74ae50df7d941f,
+        type: 2}
+      propertyPath: RotateSpeed
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b3b3df70ff866af46a74ae50df7d941f, type: 2}
   m_IsPrefabParent: 0
