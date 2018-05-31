@@ -56,6 +56,7 @@ public class SceneLoader : MonoBehaviour {
 
     public void ActivateScene()
     {
+        UnityEngine.Analytics.AnalyticsEvent.GameStart();
         asyncLoad.allowSceneActivation = true;
     }
 

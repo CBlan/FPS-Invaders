@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MiscButtons : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    private Scene thisScene;
+
+    // Use this for initialization
+    void Start () {
+        thisScene = SceneManager.GetActiveScene();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -26,15 +28,11 @@ public class MiscButtons : MonoBehaviour {
         SceneManager.LoadScene("LoadScene");
     }
 
-    public void LoadMain()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("Main");
-    }
 
     public void LoadStart()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Start");
+        UnityEngine.Analytics.AnalyticsEvent.LevelQuit(thisScene.name, thisScene.buildIndex);
     }
 }

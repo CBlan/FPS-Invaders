@@ -22,10 +22,12 @@ public class GameManager : MonoBehaviour {
     public GameObject winPannel;
     public GameObject lossPannel;
     private bool hasFin;
+    private Scene thisScene;
     // Use this for initialization
     void Start () {
         GM = this;
         StartCoroutine("SpawnDropShips");
+        thisScene = SceneManager.GetActiveScene();
         PauseManager.instance.PauseGame();
         //CameraFade.StartAlphaFade(Color.black, true, 5f);
     }
@@ -70,6 +72,8 @@ public class GameManager : MonoBehaviour {
     {
         yield return new WaitForSeconds(2.3f);
         CameraFade.StartAlphaFade(Color.black, false, 5f);
+        UnityEngine.Analytics.AnalyticsEvent.GameOver();
+        UnityEngine.Analytics.AnalyticsEvent.LevelComplete(thisScene.name, thisScene.buildIndex);
         yield return new WaitForSeconds(2.3f);
         SceneManager.LoadScene("Win");
         yield break;
@@ -79,6 +83,8 @@ public class GameManager : MonoBehaviour {
     {
         yield return new WaitForSeconds(2.3f);
         CameraFade.StartAlphaFade(Color.black, false, 5f);
+        UnityEngine.Analytics.AnalyticsEvent.GameOver();
+        UnityEngine.Analytics.AnalyticsEvent.LevelFail(thisScene.name, thisScene.buildIndex);
         yield return new WaitForSeconds(2.3f);
         SceneManager.LoadScene("Loss");
         yield break;

@@ -15,7 +15,6 @@ public class EnemyAI : MonoBehaviour {
     private bool hasCollided;
     public GameObject thrusters;
     public GameObject landingEffect;
-    private GameObject landEffect;
 
     // Use this for initialization
     void Start () {
@@ -51,7 +50,7 @@ public class EnemyAI : MonoBehaviour {
 
             if (Physics.Raycast(ray, out hit, activationHeight, mask.value))
             {
-                landEffect = Instantiate(landingEffect, hit.point, Quaternion.identity);
+                Instantiate(landingEffect, hit.point, Quaternion.identity);
                 Fabric.EventManager.Instance.PostEvent("Exploder/Activate", gameObject);
                 Fabric.EventManager.Instance.PostEvent("Exploder/Movement", gameObject);
                 //landEffect.transform.SetParent(this.gameObject.transform);
