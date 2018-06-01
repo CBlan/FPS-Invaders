@@ -19,8 +19,6 @@ public class GameManager : MonoBehaviour {
     public float timeBetweenSpawns;
     private int dropshipsSpawned;
     private GameObject dropshipSpawned;
-    public GameObject winPannel;
-    public GameObject lossPannel;
     private bool hasFin;
     private Scene thisScene;
     // Use this for initialization
@@ -92,10 +90,11 @@ public class GameManager : MonoBehaviour {
 
     IEnumerator SpawnDropShips()
     {
-        yield return new WaitForSeconds(timeBetweenSpawns);
+        yield return new WaitForSeconds(timeBetweenSpawns/2);
         dropshipSpawned = Instantiate(dropshipPrefab, dropShipSpawns[Random.Range(0, dropShipSpawns.Length)].position, Quaternion.identity);
         GameManager.GM.enemies.Add(dropshipSpawned);
         dropshipsSpawned++;
+        yield return new WaitForSeconds(timeBetweenSpawns / 2);
         if (dropshipsSpawned < dropShipsToSpawn)
         {
             //yield return new WaitForSeconds(timeBetweenSpawns);

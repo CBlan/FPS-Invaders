@@ -1,16 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartMusic : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-        Fabric.EventManager.Instance.PostEvent("Menu/Start", gameObject);
+	void Start ()
+    {
+        //if(SceneManager.GetActiveScene().isLoaded)
+        //    Fabric.EventManager.Instance.PostEvent("Menu/Start", gameObject);
+        StartCoroutine("StartMusicLate");
     }
 	
-	// Update is called once per frame
 	void Update () {
 		
 	}
+
+    IEnumerator StartMusicLate()
+    {
+        yield return new WaitForSeconds(0.2f);
+        if (SceneManager.GetActiveScene().isLoaded)
+        {
+            Fabric.EventManager.Instance.PostEvent("Menu/Start", gameObject);
+        }
+        else StartCoroutine("StartMusicLate");
+        yield break;
+    }
 }

@@ -7094,8 +7094,8 @@ RectTransform:
   m_Father: {fileID: 368247652}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.4, y: 0.3}
-  m_AnchorMax: {x: 0.6, y: 0.43}
+  m_AnchorMin: {x: 0.38, y: 0.3}
+  m_AnchorMax: {x: 0.62, y: 0.45}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -11896,9 +11896,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '[Mouse] to look
+  m_Text: '[Mouse] to look.
 
-    [Left Click] to attack'
+    [Left Click] to attack (Red Crosshair on enemies).'
 --- !u!222 &356655448
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23865,8 +23865,6 @@ MonoBehaviour:
     type: 2}
   dropShipsToSpawn: 10
   timeBetweenSpawns: 8
-  winPannel: {fileID: 0}
-  lossPannel: {fileID: 0}
 --- !u!4 &673064922
 Transform:
   m_ObjectHideFlags: 0
@@ -41200,7 +41198,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1017895240}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 54.278397, z: 0}
+  m_LocalPosition: {x: 0, y: 73.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 280653362}
@@ -50093,7 +50091,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -60.799995, y: 35.8}
-  m_SizeDelta: {x: 140.84723, y: 74.11635}
+  m_SizeDelta: {x: 180, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1216742490
 MonoBehaviour:
@@ -52621,48 +52619,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1257886325}
   m_Mesh: {fileID: 4300000, guid: 3d56daa4178f33f4a93cf14ef97f6c11, type: 3}
---- !u!1001 &1258478473
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4282699222321648, guid: f6d9086f34f4cb34683b3f309dc698fe, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4282699222321648, guid: f6d9086f34f4cb34683b3f309dc698fe, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4282699222321648, guid: f6d9086f34f4cb34683b3f309dc698fe, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4282699222321648, guid: f6d9086f34f4cb34683b3f309dc698fe, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4282699222321648, guid: f6d9086f34f4cb34683b3f309dc698fe, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4282699222321648, guid: f6d9086f34f4cb34683b3f309dc698fe, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4282699222321648, guid: f6d9086f34f4cb34683b3f309dc698fe, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4282699222321648, guid: f6d9086f34f4cb34683b3f309dc698fe, type: 2}
-      propertyPath: m_RootOrder
-      value: 17
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: f6d9086f34f4cb34683b3f309dc698fe, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &1258838661
 Prefab:
   m_ObjectHideFlags: 0
@@ -72882,7 +72838,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -77255,13 +77211,13 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Look at these points and [Right Click] to swap positions
+  m_Text: Look at these points (Green Crosshair) and [Right Click] to swap positions.
 --- !u!222 &1781713336
 CanvasRenderer:
   m_ObjectHideFlags: 0

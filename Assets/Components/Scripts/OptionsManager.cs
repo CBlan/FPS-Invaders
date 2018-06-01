@@ -24,8 +24,7 @@ public class OptionsManager : MonoBehaviour {
         {
             oMInstance = this;
         }
-
-        if (oMInstance != this)
+        else
         {
             Destroy(gameObject);
         }
@@ -34,7 +33,7 @@ public class OptionsManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        QualitySettings.SetQualityLevel(5, true);
+        //QualitySettings.SetQualityLevel(5, true);
     }
 	
 	// Update is called once per frame
@@ -44,16 +43,16 @@ public class OptionsManager : MonoBehaviour {
 
     public void HighQuality()
     {
-        QualitySettings.SetQualityLevel(5, true);
+        QualitySettings.SetQualityLevel(2, true);
     }
 
     public void MediumQuality()
     {
-        QualitySettings.SetQualityLevel(3, true);
+        QualitySettings.SetQualityLevel(1, true);
     }
 
     public void LowQuality()
     {
-        QualitySettings.SetQualityLevel(1, true);
+        QualitySettings.SetQualityLevel(0, true);
     }
 }

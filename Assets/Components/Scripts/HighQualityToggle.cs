@@ -10,7 +10,7 @@ public class HighQualityToggle : MonoBehaviour {
     void Start()
     {
         m_Toggle = GetComponent<Toggle>();
-        if (QualitySettings.GetQualityLevel() == 5)
+        if (QualitySettings.GetQualityLevel() == 2)
         {
             m_Toggle.isOn = true;
         }

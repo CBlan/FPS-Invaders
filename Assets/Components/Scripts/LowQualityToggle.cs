@@ -9,7 +9,7 @@ public class LowQualityToggle : MonoBehaviour {
     // Use this for initialization
     void Start () {
         m_Toggle = GetComponent<Toggle>();
-        if (QualitySettings.GetQualityLevel() == 1)
+        if (QualitySettings.GetQualityLevel() == 0)
         {
             m_Toggle.isOn = true;
         }

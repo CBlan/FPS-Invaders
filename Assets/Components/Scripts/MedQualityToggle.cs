@@ -10,7 +10,7 @@ public class MedQualityToggle : MonoBehaviour {
     void Start()
     {
         m_Toggle = GetComponent<Toggle>();
-        if (QualitySettings.GetQualityLevel() == 3)
+        if (QualitySettings.GetQualityLevel() == 1)
         {
             m_Toggle.isOn = true;
         }
